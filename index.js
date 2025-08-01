@@ -1,8 +1,3 @@
-// index.js 최상단
-if (process.env.NODE_ENV !== 'production') {
-  require('dotenv').config();
-}
-
 const express = require('express');
 const axios = require('axios');
 const { create } = require('xmlbuilder2');
