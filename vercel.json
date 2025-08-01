@@ -1,13 +1,19 @@
-// vercel.json
 {
   "version": 2,
   "builds": [
-    { "src": "api/**/*.js", "use": "@vercel/node" }
+    {
+      "src": "api/**/*.js",
+      "use": "@vercel/node"
+    }
   ],
   "routes": [
-    // /api/rss.js 를 /api/rss 로 매핑
-    { "src": "/api/rss", "dest": "/api/rss.js" },
-    // RSS를 /rss.xml 로 쓰고 싶으면
-    { "src": "/rss.xml", "dest": "/api/rss.js" }
+    {
+      "src": "/api/rss",
+      "dest": "api/rss.js"
+    },
+    {
+      "src": "/rss.xml",
+      "dest": "api/rss.js"
+    }
   ]
 }
